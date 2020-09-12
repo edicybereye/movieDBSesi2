@@ -10,7 +10,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   PageController pageController =
-      PageController(initialPage: 0, viewportFraction: 0.6);
+      PageController(initialPage: 0, viewportFraction: 0.8);
   int _selectPage = 0;
 
   @override
@@ -34,6 +34,7 @@ class _HomeState extends State<Home> {
           child: TabBarView(
             children: [
               Container(
+                margin: EdgeInsets.only(top: 50),
                 child: PageView.builder(
                   onPageChanged: (a) {
                     setState(() {
@@ -86,12 +87,11 @@ class _HomeState extends State<Home> {
           bottom: TabBar(
             labelColor: Colors.white,
             unselectedLabelColor: Colors.grey[400],
-            indicator: UnderlineTabIndicator(borderSide: BorderSide.none
-                // borderSide: BorderSide(
-                //   color: Colors.white,
-                //   width: 3,
-                // )
-                ),
+            indicator: UnderlineTabIndicator(
+                borderSide: BorderSide(
+              color: Colors.white,
+              width: 0.5,
+            )),
             isScrollable: true,
             tabs: [
               ItemTabs(
