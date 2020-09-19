@@ -11,7 +11,7 @@ class PosterMovie extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
-          vertical: selectPage == index ? 100 : 130, horizontal: 16),
+          vertical: selectPage == index ? 10 : 30, horizontal: 16),
       child: Hero(
         tag: "$index",
         child: ClipRRect(

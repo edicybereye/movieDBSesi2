@@ -33,35 +33,88 @@ class _HomeState extends State<Home> {
           )),
           child: TabBarView(
             children: [
-              Container(
-                margin: EdgeInsets.only(top: 50),
-                child: PageView.builder(
-                  onPageChanged: (a) {
-                    setState(() {
-                      _selectPage = a;
-                    });
-                  },
-                  controller: pageController,
-                  itemCount: 12,
-                  itemBuilder: (context, index) {
-                    return InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => MovieDetail(
-                                      index: index,
-                                    )));
-                      },
-                      child: PosterMovie(
-                        selectPage: _selectPage,
-                        index: index,
-                        imgUrl:
-                            "https://image.tmdb.org/t/p/w220_and_h330_face/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg",
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  SizedBox(
+                    height: 80,
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(top: 50),
+                      child: PageView.builder(
+                        onPageChanged: (a) {
+                          setState(() {
+                            _selectPage = a;
+                          });
+                        },
+                        controller: pageController,
+                        itemCount: 12,
+                        itemBuilder: (context, index) {
+                          return InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => MovieDetail(
+                                            index: index,
+                                          )));
+                            },
+                            child: PosterMovie(
+                              selectPage: _selectPage,
+                              index: index,
+                              imgUrl:
+                                  "https://image.tmdb.org/t/p/w220_and_h330_face/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg",
+                            ),
+                          );
+                        },
                       ),
-                    );
-                  },
-                ),
+                    ),
+                  ),
+                  Text(
+                    "Title Movie",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Category Movie | 2 Hours",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            "7.0",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "IMDB",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  )
+                ],
               ),
               Container(
                 child: Center(
