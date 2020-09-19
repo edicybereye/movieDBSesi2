@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app_new/custom/itemRatingMovie.dart';
 import 'package:movie_app_new/custom/itemTab.dart';
 import 'package:movie_app_new/custom/posterMovie.dart';
 import 'package:movie_app_new/screen/movieDetail.dart';
@@ -37,7 +38,7 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   SizedBox(
-                    height: 80,
+                    height: 90,
                   ),
                   Expanded(
                     child: Container(
@@ -91,29 +92,46 @@ class _HomeState extends State<Home> {
                     height: 16,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Column(
-                        children: [
-                          Text(
-                            "7.0",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            "IMDB",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      )
+                      ItemRating(
+                        rating: "7.0",
+                        titleRating: "IMDB",
+                      ),
+                      ItemRating(
+                        rating: "87%",
+                        titleRating: "Favorite",
+                      ),
+                      ItemRating(
+                        rating: "79%",
+                        titleRating: "Like",
+                      ),
                     ],
-                  )
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 60),
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                        border: Border.all(
+                      width: 3,
+                      color: Colors.white,
+                    )),
+                    child: Text(
+                      "Buy Tickets",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                   SizedBox(
+                    height: 16,
+                  ),
                 ],
               ),
               Container(
