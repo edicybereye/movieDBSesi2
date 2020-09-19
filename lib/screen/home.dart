@@ -13,6 +13,7 @@ class _HomeState extends State<Home> {
   PageController pageController =
       PageController(initialPage: 0, viewportFraction: 0.8);
   int _selectPage = 0;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -115,11 +116,11 @@ class _HomeState extends State<Home> {
                     margin: EdgeInsets.symmetric(horizontal: 60),
                     padding: EdgeInsets.symmetric(vertical: 16),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(30),
                         border: Border.all(
-                      width: 3,
-                      color: Colors.white,
-                    )),
+                          width: 3,
+                          color: Colors.white,
+                        )),
                     child: Text(
                       "Buy Tickets",
                       textAlign: TextAlign.center,
@@ -129,7 +130,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                   SizedBox(
+                  SizedBox(
                     height: 16,
                   ),
                 ],
