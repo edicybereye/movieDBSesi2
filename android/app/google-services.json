@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "726949717200",
+    "firebase_url": "https://moviedbtrasa.firebaseio.com",
+    "project_id": "moviedbtrasa",
+    "storage_bucket": "moviedbtrasa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726949717200:android:04963cced080055c4daad5",
+        "android_client_info": {
+          "package_name": "com.movieeditrasa.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726949717200-cpu6lsm8211v50728ifqn275kif6j1i0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.movieeditrasa.android",
+            "certificate_hash": "7789bd58b0c2fcba2dd007b79013f9ad96c50718"
+          }
+        },
+        {
+          "client_id": "726949717200-4jqpp36tl492hsao3sn1994qqadqrbn6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnXbJExZjj5gfaw24RpwDI9jdX5_X6AzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726949717200-4jqpp36tl492hsao3sn1994qqadqrbn6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

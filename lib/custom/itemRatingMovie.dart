@@ -21,7 +21,7 @@ class ItemRating extends StatelessWidget {
           "$titleRating",
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: Colors.grey,
+            color: Colors.grey[300],
             fontWeight: FontWeight.bold,
           ),
         ),
