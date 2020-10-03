@@ -1,9 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_app_new/custom/itemRatingMovie.dart';
 import 'package:movie_app_new/custom/itemTab.dart';
 import 'package:movie_app_new/custom/posterMovie.dart';
+import 'package:movie_app_new/models/user.dart';
 
 import 'package:movie_app_new/models/movie.dart';
 import 'package:movie_app_new/screen/movieDetail.dart';
@@ -251,7 +251,7 @@ class _HomeState extends State<Home> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(3600),
                 child: Image.network(
-                  "${widget.user.photoURL}",
+                  "${widget.user.photo}",
                   fit: BoxFit.cover,
                   width: 40,
                   height: 40,
